@@ -127,7 +127,7 @@ export default {
 </script>
 <style>
 .footer {
-  height: 400px;
+ 
   background-color: #f6bd2f;
 }
 .container {

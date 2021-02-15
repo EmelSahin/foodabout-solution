@@ -17,6 +17,9 @@
 import Vue from 'vue';
 import DashboardPlugin from './plugins/dashboard-plugin';
 import App from './App.vue';
+import VueCarousel from 'vue-carousel';
+
+Vue.use(VueCarousel);
 
 // router setup
 import router from './routes/router';

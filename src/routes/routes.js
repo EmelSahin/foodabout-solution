@@ -18,11 +18,6 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/Dashboard.vue')
       },
       {
-        path: '/icons',
-        name: 'icons',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Icons.vue')
-      },
-      {
         path: '/profile',
         name: 'profile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
@@ -41,6 +36,17 @@ const routes = [
         path: '/tables',
         name: 'tables',
         component: () => import(/* webpackChunkName: "demo" */ '../views/RegularTables.vue')
+      },
+      {
+        path: '/search',
+        name: 'search',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Search.vue')
+      }
+      ,
+      {
+        path: '/details',
+        name: 'details',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/RestaurantDetails.vue')
       }
     ]
   },

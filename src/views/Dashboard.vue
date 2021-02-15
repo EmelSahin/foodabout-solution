@@ -235,6 +235,7 @@ export default {
   background-clip: border-box;
   border: 0px solid transparent;
   border-radius: 0.375rem;
+  padding: 10px;
 }
 
 .link-botton {
