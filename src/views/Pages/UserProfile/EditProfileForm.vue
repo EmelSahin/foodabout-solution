@@ -1,154 +1,156 @@
 <template>
-  <div>
-    <div class="row">
-      <div class="col-md-6">
-        <b-card class="card1">
-          <b-container class="choose">
-            <b-form-group label="Sort by" v-slot="{ ariaDescribedby }">
-              <b-form-radio-group
-                v-model="selectede"
-                :options="optionse"
-                :aria-describedby="ariaDescribedby"
-                name="radios-stacked"
-                stacked
-              ></b-form-radio-group>
-            </b-form-group>
-            <b-form-group label="Filters" v-slot="{ ariaDescribedby }">
-              <b-form-checkbox-group
-                v-model="selected1"
-                :options="options1"
-                :aria-describedby="ariaDescribedby"
-                plain
-                stacked
-              ></b-form-checkbox-group>
-            </b-form-group>
-          </b-container>
-        </b-card>
-      </div>
-      <div class="col-md-6">
-        <b-card2>
-          <b-container class="work">
-            <b-form @submit.prevent="updateProfile">
-              <h6 class="heading-small text-muted mb-4">Work with us</h6>
+  <b-container class="12">
+    <div>
+      <b-row>
+        <b-col md="3">
+          <b-card class="card1">
+            <b-container class="choose">
+              <b-form-group label="Sort by" v-slot="{ ariaDescribedby }">
+                <b-form-radio-group
+                  v-model="selectede"
+                  :options="optionse"
+                  :aria-describedby="ariaDescribedby"
+                  name="radios-stacked"
+                  stacked
+                ></b-form-radio-group>
+              </b-form-group>
+              <b-form-group label="Filters" v-slot="{ ariaDescribedby }">
+                <b-form-checkbox-group
+                  v-model="selected1"
+                  :options="options1"
+                  :aria-describedby="ariaDescribedby"
+                  plain
+                  stacked
+                ></b-form-checkbox-group>
+              </b-form-group>
+            </b-container>
+          </b-card>
+        </b-col>
+        <b-col md="9">
+          <b-card2>
+            <b-container class="work">
+              <b-form @submit.prevent="updateProfile">
+                <h6 class="heading-small text-muted mb-4">Work with us</h6>
 
-              <div class="pl-lg-4">
-                <b-form-group
-                  label-cols="4"
-                  label-cols-lg="2"
-                  label="Name*"
-                  label-for="input-default"
-                >
-                  <b-form-input
-                    id="input-default"
-                    type="text"
-                    label="name"
-                    placeholder="name"
-                    v-model="user.name"
-                  ></b-form-input>
-                </b-form-group>
-                <b-form-group
-                  label-cols="4"
-                  label-cols-lg="2"
-                  label="Email*"
-                  label-for="input-default"
-                >
-                  <b-form-input
-                    id="input-default"
-                    type="text"
-                    label="email"
-                    placeholder="Email*"
-                    v-model="user.email"
-                  ></b-form-input>
-                </b-form-group>
-                <b-form-group
-                  label-cols="4"
-                  label-cols-lg="2"
-                  label="Telephone*"
-                  label-for="input-default"
-                >
-                  <b-form-input
-                    id="input-default"
-                    type="text"
-                    label="telephone"
-                    placeholder="Telephone*"
-                    v-model="user.telephone"
-                  ></b-form-input>
-                </b-form-group>
-                <b-form-group
-                  label-cols="4"
-                  label-cols-lg="2"
-                  label="Date of birth*"
-                  label-for="input-default"
-                >
-                  <b-form-input
-                    id="input-default"
-                    type="text"
-                    label="birth"
-                    placeholder="Date of birth*"
-                    v-model="user.date"
-                  ></b-form-input>
-                </b-form-group>
-                <b-form-group
-                  label-cols="4"
-                  label-cols-lg="2"
-                  label="City"
-                  label-for="input-default"
-                >
-                  <b-form-select
-                    label="city"
-                    placeholder="City"
-                    v-model="selected"
-                    :options="options"
+                <div class="pl-lg-4">
+                  <b-form-group
+                    label-cols="4"
+                    label-cols-lg="2"
+                    label="Name*"
+                    label-for="input-default"
                   >
-                  </b-form-select>
-                </b-form-group>
-                <b-form-group
-                  label-cols="4"
-                  label-cols-lg="2"
-                  label="Zone"
-                  label-for="input-default"
-                >
-                  <b-form-select
-                    label="zone"
-                    placeholder="Zone"
-                    v-model="selected"
-                    :options="options"
+                    <b-form-input
+                      id="input-default"
+                      type="text"
+                      label="name"
+                      placeholder="name"
+                      v-model="user.name"
+                    ></b-form-input>
+                  </b-form-group>
+                  <b-form-group
+                    label-cols="4"
+                    label-cols-lg="2"
+                    label="Email*"
+                    label-for="input-default"
                   >
-                  </b-form-select>
-                </b-form-group>
-              </div>
-            </b-form>
-          </b-container>
-        </b-card2>
-        <div>
-          <div class="work2">
-            <b-card2  img-alt="Card image" img-right>
-              <section>
-                <b-card-text>
-                  <h6 class="heading-small text-muted mb-4">Select Vehicles</h6>
+                    <b-form-input
+                      id="input-default"
+                      type="text"
+                      label="email"
+                      placeholder="Email*"
+                      v-model="user.email"
+                    ></b-form-input>
+                  </b-form-group>
+                  <b-form-group
+                    label-cols="4"
+                    label-cols-lg="2"
+                    label="Telephone*"
+                    label-for="input-default"
+                  >
+                    <b-form-input
+                      id="input-default"
+                      type="text"
+                      label="telephone"
+                      placeholder="Telephone*"
+                      v-model="user.telephone"
+                    ></b-form-input>
+                  </b-form-group>
+                  <b-form-group
+                    label-cols="4"
+                    label-cols-lg="2"
+                    label="Date of birth*"
+                    label-for="input-default"
+                  >
+                    <b-form-input
+                      id="input-default"
+                      type="text"
+                      label="birth"
+                      placeholder="Date of birth*"
+                      v-model="user.date"
+                    ></b-form-input>
+                  </b-form-group>
+                  <b-form-group
+                    label-cols="4"
+                    label-cols-lg="2"
+                    label="City"
+                    label-for="input-default"
+                  >
+                    <b-form-select
+                      label="city"
+                      placeholder="City"
+                      v-model="selected"
+                      :options="options"
+                    >
+                    </b-form-select>
+                  </b-form-group>
+                  <b-form-group
+                    label-cols="4"
+                    label-cols-lg="2"
+                    label="Zone"
+                    label-for="input-default"
+                  >
+                    <b-form-select
+                      label="zone"
+                      placeholder="Zone"
+                      v-model="selected"
+                      :options="options"
+                    >
+                    </b-form-select>
+                  </b-form-group>
+                </div>
+              </b-form>
+            </b-container>
+          </b-card2>
+          <div>
+            <div class="work2">
+              <b-card2  img-alt="Card image" img-right>
+                <section>
+                  <b-card-text>
+                    <h6 class="heading-small text-muted mb-4">Select Vehicles</h6>
 
-                  <b-icon icon="bicycle" aria-hidden="true"></b-icon> Bicycle
-                  <input
-                    class="radio"
-                    type="radio"
-                    v-model="n"
-                    v-bind:value="a"
-                  />
-                  <hr class="my-4" />
-                  <i class="fas fa-motorcycle"></i> Motorcycle
-                  <input class="radio" type="radio" v-model="n" />
-                  <hr class="my-4" />
-                  <i class="fas fa-car-side"></i> Car
-                  <input class="radio" type="radio" v-model="n" />
-                </b-card-text>
-              </section>
-              <b-button class="btn1 apply">Apply for a job</b-button>
-            </b-card2>
+                    <b-icon icon="bicycle" aria-hidden="true"></b-icon> Bicycle
+                    <input
+                      class="radio"
+                      type="radio"
+                      v-model="n"
+                      v-bind:value="a"
+                    />
+                    <hr class="my-1" />
+                    <i class="fas fa-motorcycle"></i> Motorcycle
+                    <input class="radio" type="radio" v-model="n" />
+                    <hr class="my-1" />
+                    <i class="fas fa-car-side"></i> Car
+                    <input class="radio" type="radio" v-model="n" />
+                  </b-card-text>
+                </section>
+                <b-button class="btn1 apply">Apply for a job</b-button>
+              </b-card2>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>    
-  </div>
+        </b-col>
+      </b-row>    
+    </div>
+  </b-container>
 </template>
 
 <script>
@@ -236,7 +238,6 @@ export default {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  float: right;
 }
 .card1 {
   position: relative;
@@ -253,7 +254,6 @@ export default {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 20px;
-  margin-left: 177px;
   width: 250px;
 }
 .card2 {
@@ -271,7 +271,6 @@ export default {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 20px;
-  margin-left: 177px;
 
 }
 
@@ -314,13 +313,14 @@ export default {
 .work{
   background: #fff;
   border-radius: 20px;
-  width: 750px;
+  width: 100%
 }
 .work2{
   background: #fff;
   border-radius: 20px;
-  width: 750px;
+  width: 100%;
   padding: 50px 50px 70px 30px;
   margin-bottom: 70px;
 }
+
 </style>

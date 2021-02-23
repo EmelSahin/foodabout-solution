@@ -48,6 +48,31 @@ const routes = [
         name: 'details',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/RestaurantDetails.vue')
       }
+      ,
+      {
+        path: '/sign',
+        name: 'sign',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/SignUp.vue')
+      }
+      ,
+      {
+        path: '/basket',
+        name: 'basket',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Basket.vue')
+      }
+      ,
+      {
+        path: '/checkout',
+        name: 'checkout',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/CheckOut.vue')
+      }
+      ,
+      {
+        path: '/order',
+        name: 'order',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Order.vue')
+      }
+     
     ]
   },
   {

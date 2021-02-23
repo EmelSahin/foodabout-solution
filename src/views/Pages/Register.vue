@@ -74,7 +74,7 @@
                   </base-input>
                   <div class="text-muted font-italic"><small>password strength: <span
                     class="text-success font-weight-700">strong</span></small></div>
-                  <b-row class=" my-4">
+                  <b-row class=" my-1">
                     <b-col cols="12">
                       <base-input :rules="{ required: { allowFalse: false } }" name=Privacy Policy>
                         <b-form-checkbox v-model="model.agree">

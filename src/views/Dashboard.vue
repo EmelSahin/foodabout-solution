@@ -4,24 +4,31 @@
       <b-container class="bv-example-row">
         <b-row align-h="start">
           <b-col cols="6">
-            <h1 class="display-2 text-white">
-              The Best Way to<br />
-              Get Delicious Food
-            </h1>
-            <span class="display-2 text-white1">
-              Lorem ipsum dolar sit amet, sed do eiusmod tempor<br />incididunt
-              ut labore et dolore magna aliqua.
-            </span>
-            <div class="row">
+            <b-row>
+              <b-col cols="12">
+                <h1 class="display-2 text-white">
+                  The Best Way to<br />
+                  Get Delicious Food
+                </h1>
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col cols="12">
+                <span class="display-2 text-white1">
+                  Lorem ipsum dolar sit amet, sed do eiusmod tempor<br />incididunt
+                  ut labore et dolore magna aliqua.
+                </span>
+              </b-col>
+            </b-row>
+            <b-row cols="12">
               <b-col cols="6"
                 ><a href="#!" class="btn get-start">Enter Your Address</a>
               </b-col>
               <b-col cols="6" class="text-right-r"
                 ><a href="#!" class="btn get-start1">Get Started</a>
               </b-col>
-            </div>
+            </b-row>
           </b-col>
-
           <b-col cols="6"
             ><div class="image">
               <a href="#">
@@ -81,7 +88,7 @@
       </div>
       <div class="page-middle_1">
         <b-container class="bv-example-row mb-3">
-          <b-row cols="2">
+          <b-row cols="12">
             <b-col cols="6"
               ><b-card class="card-img" img-src="img/theme/M1.png"> </b-card
               ><b-card class="card-img1" img-src="img/theme/M2.png"> </b-card
@@ -215,7 +222,7 @@ export default {
 <style>
 .container-fluid {
   background-color: #f6bd2f;
-  height: 600px;
+  height: 100%;
 }
 .page-middle {
   height: 1500px;
@@ -272,11 +279,12 @@ export default {
 .img {
   vertical-align: middle;
   border-style: none;
-  width: 650px;
+  width: 100%;
 }
 .img-1 {
-  width: 520px;
+  width: 100%;
   float: left;
+  margin-bottom: 100px;
 }
 .get-start {
   background: #fff;
@@ -293,35 +301,40 @@ export default {
   text-align: left;
 }
 .page-middle1 {
-  height: 500px;
+  height: 100%;
   text-align: center;
 }
 .page-middle_1 {
-  height: 600px;
+  height: 100%;
 }
 .card-img {
-  width: 450px;
+  width: 100%;
   border-radius: 10px;
 }
 .card-img1 {
-  width: 450px;
+  width: 100%;
   border-radius: 10px;
 }
 .card-img2 {
   margin-bottom: 10px;
 
-  width: 450px;
+  width: 100%;
   border-radius: 10px;
-  margin-bottom: -100px;
+  
 }
 .card-body1 {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1.5rem;
   background: #f5e1a4;
 }
 .card-body1:hover {
   background: white;
+}
+.col-6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+
 }
 </style>

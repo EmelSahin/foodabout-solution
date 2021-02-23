@@ -23,7 +23,406 @@
                   stacked
                 ></b-form-checkbox-group>
               </b-form-group>
-              
+              <h5>Items</h5>
+              <b-row>
+                <b-col cols="12">
+                  <b-row cols="12">
+                    <b-col cols="9">
+                      <h5><span class="basket">1x</span> Whopperking Menu</h5>
+                      Coca Cola light(Big)
+                    </b-col>
+                    <b-col cols="3">
+                      <h5 class="basket11">
+                        <span class="basket11">€9,90</span>
+                      </h5>
+                    </b-col>
+                  </b-row>
+                  <hr class="my-1" />
+                  <b-row cols="4">
+                    <b-col cols="3"></b-col>
+                    <b-col cols="5"><h5 class="basket2">Subtotal:</h5></b-col>
+                    <b-col cols="4"
+                      ><h5 class="basket1">
+                        <span class="basket1">€ 11,50</span>
+                      </h5></b-col
+                    >
+                  </b-row>
+                  <b-row cols="4">
+                    <b-col cols="2"></b-col>
+                    <b-col cols="6"
+                      ><h5 class="basket2">Delivery fee:</h5></b-col
+                    >
+                    <b-col cols="4"
+                      ><h5 class="basket1">
+                        <span class="basket1">€ 0,00</span>
+                      </h5></b-col
+                    >
+                  </b-row>
+                  <b-row cols="4">
+                    <b-col cols="3"></b-col>
+                    <b-col cols="5"
+                      ><h5 class="basket2">Service fee:</h5></b-col
+                    >
+                    <b-col cols="4"
+                      ><h5 class="basket1">
+                        <span class="basket1">€ 0,00</span>
+                      </h5></b-col
+                    >
+                  </b-row>
+                  <b-row cols="4">
+                    <b-col cols="3"></b-col>
+                    <b-col cols="5"><h5 class="basket22">Rider tip:</h5></b-col>
+                    <b-col cols="4"
+                      ><h5 class="basket1">
+                        <span class="basket1">€ 0,00</span>
+                      </h5></b-col
+                    >
+                  </b-row>
+                  <hr class="my-1" />
+                  <b-row cols="4">
+                    <b-col cols="3"></b-col>
+                    <b-col cols="5"><h4 class="basket22">Total:</h4></b-col>
+                    <b-col cols="4"
+                      ><h5 class="basket1">
+                        <span class="basket1">€ 9,90</span>
+                      </h5></b-col
+                    >
+                  </b-row>
+                  <b-row cols="12">
+                    <b-col cols="12">
+                      <b-form-checkbox to="/dashboard" class="text-light"
+                        ><small>
+                          <h5>
+                            <span class="basket"></span> No cutlary to this
+                            order
+                            <font color="#f6bd2f">#UnplasticOurFood</font>
+                          </h5>
+                          Please help us ensure that plastic cutlery is only
+                          proveded upon your request.
+                        </small></b-form-checkbox
+                      >
+                    </b-col>
+                  </b-row>
+                  <b-button
+                    v-b-modal.modal-center
+                    class="btn restaurant1"
+                    title="Checkout"
+                    id="show-btn"
+                    @click="$bvModal.show('bv-modal-example1')"
+                  >
+                    Checkout</b-button
+                  >
+                  <b-modal id="bv-modal-example1" hide-footer>
+                    <template #modal-title> </template>
+                    <div class="d-block text-center"></div>
+                    <div>
+                      <h3 class="info">Checkout</h3>
+                      <b-card-text> Items </b-card-text>
+                      <b-row>
+                        <b-col cols="12">
+                          <b-row>
+                            <b-card class="basket-card">
+                              <b-row cols="12">
+                                <b-col cols="9"
+                                  ><b-card-text>
+                                    <h4>
+                                      <span class="basket">1x</span> Whopperking
+                                      Menu
+                                    </h4>
+                                    Coca Cola light(Big)
+                                  </b-card-text></b-col
+                                >
+                                <b-col cols="3">
+                                  <h4 class="basket11">
+                                    <span class="basket11">€9,90</span>
+                                  </h4>
+                                </b-col>
+                              </b-row>
+                              <hr class="my-1" />
+                              <b-row cols="4">
+                                <b-col cols="9"
+                                  ><h4 class="basket2">Subtotal:</h4></b-col
+                                >
+                                <b-col cols="3"
+                                  ><h4 class="basket1">
+                                    <span class="basket1">€ 11,50</span>
+                                  </h4></b-col
+                                >
+                              </b-row>
+                              <b-row cols="4">
+                                <b-col cols="9"
+                                  ><h4 class="basket2">Delivery fee:</h4></b-col
+                                >
+                                <b-col cols="3"
+                                  ><h4 class="basket1">
+                                    <span class="basket1">€ 0,00</span>
+                                  </h4></b-col
+                                >
+                              </b-row>
+                              <b-row cols="4">
+                                <b-col cols="9"
+                                  ><h4 class="basket2">Service fee:</h4></b-col
+                                >
+                                <b-col cols="3"
+                                  ><h4 class="basket1">
+                                    <span class="basket1">€ 0,00</span>
+                                  </h4></b-col
+                                >
+                              </b-row>
+                              <b-row cols="4">
+                                <b-col cols="9"
+                                  ><h4 class="basket22">Rider tip:</h4></b-col
+                                >
+                                <b-col cols="3"
+                                  ><h4 class="basket1">
+                                    <b-button pill class="outline-secondary"
+                                      >€ 0,00</b-button
+                                    >
+                                  </h4></b-col
+                                >
+                              </b-row>
+                              <hr class="my-1" />
+                              <b-row cols="4">
+                                <b-col cols="9"
+                                  ><h4 class="basket22">Total:</h4></b-col
+                                >
+                                <b-col cols="3"
+                                  ><h4 class="basket1">
+                                    <span class="basket1">€ 9,90</span>
+                                  </h4></b-col
+                                >
+                              </b-row>
+                            </b-card>
+                          </b-row>
+                        </b-col>
+                      </b-row>
+                      <b-row cols="12">
+                        <b-col cols="12">
+                          <b-card-text>
+                            <b-form-checkbox to="/dashboard" class="text-light"
+                              ><small>
+                                <h4>
+                                  <span class="basket"></span> No cutlary to
+                                  this order
+                                  <font color="#f6bd2f">#UnplasticOurFood</font>
+                                </h4>
+                                Please help us ensure that plastic cutlery is
+                                only proveded upon your request.
+                              </small></b-form-checkbox
+                            ></b-card-text
+                          >
+                        </b-col>
+                      </b-row>
+                      <b-row>
+                        <b-col cols="4"></b-col>
+                        <b-col cols="3">
+                          <b-button
+                            class="checkout1"
+                            block
+                            @click="$bvModal.hide('bv-modal-example')"
+                            >Cancel</b-button
+                          >
+                        </b-col>
+                        <b-col cols="5">
+                          <b-button
+                            v-b-modal.modal-center
+                            id="show-btn"
+                            class="checkout11"
+                            @click="$bvModal.show('bv-modal-example')"
+                            >Next Step</b-button
+                          >
+                          <b-modal id="bv-modal-example" centered hide-footer>
+                            <h3 class="info">Checkout</h3>
+                            <b-card-text> Registered </b-card-text>
+                            <b-card title="" sub-title="">
+                              <b-card-text>
+                                <b-row>
+                                  <b-col cols="10">
+                                    <i class="fas fa-building"></i>
+                                    Business
+                                    <h4 class="mini">
+                                      Dummy Address Lorem Ipsum Sit Amet
+                                    </h4>
+                                  </b-col>
+                                  <b-col cols="2">
+                                    <b-form-radio
+                                      name="radio-size"
+                                    ></b-form-radio>
+                                  </b-col>
+                                </b-row>
+
+                                <hr class="my-1" />
+                                <b-row>
+                                  <b-col cols="10">
+                                    <i class="fas fa-home"></i>
+                                    Home
+                                    <h4 class="mini">
+                                      Dummy Address Lorem Ipsum Sit Amet
+                                    </h4>
+                                  </b-col>
+                                  <b-col cols="2">
+                                    <b-form-radio
+                                      name="radio-size"
+                                    ></b-form-radio>
+                                  </b-col>
+                                </b-row>
+                                <hr class="my-1" />
+                                <b-row>
+                                  <b-col cols="10">
+                                    <i class="fas fa-home"></i>
+                                    Home 2
+                                    <h4 class="mini">
+                                      Dummy Address Lorem Ipsum Sit Amet
+                                    </h4>
+                                  </b-col>
+                                  <b-col cols="2">
+                                    <b-form-radio
+                                      name="radio-size"
+                                    ></b-form-radio>
+                                  </b-col>
+                                </b-row>
+                              </b-card-text>
+                            </b-card>
+
+                            <br />
+                            <b-row>
+                              <b-col cols="4">
+                                <i class="fas fa-angle-left"></i> Items</b-col
+                              >
+                              <b-col cols="3">
+                                <b-button
+                                  class="checkout1"
+                                  block
+                                  @click="$bvModal.hide('bv-modal-example')"
+                                  >Cancel</b-button
+                                >
+                              </b-col>
+                              <b-col cols="5">
+                                <b-button
+                                  v-b-modal.modal-center
+                                  id="show-btn"
+                                  class="checkout11"
+                                  @click="$bvModal.show('bv-modal-example')"
+                                  >Next Step</b-button
+                                >
+                                <b-modal
+                                  id="bv-modal-example"
+                                  centered
+                                  hide-footer
+                                >
+                                  <h3 class="info">Checkout</h3>
+                                  <b-card-text>
+                                    Chosee payment method
+                                  </b-card-text>
+                                  <b-card title="" sub-title="">
+                                    <b-card-text>
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fas fa-globe"></i>
+                                            Online
+                                          </h4>
+                                          Credit/Bank Card
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                      <hr class="my-1" />
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fab fa-paypal"></i>
+                                            Paybal
+                                          </h4>
+                                          The faster, safer way to send money
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                      <hr class="my-1" />
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fab fa-cc-apple-pay"></i>
+                                            Apple Pay
+                                          </h4>
+                                          Mobile payment and digital wallet
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                      <hr class="my-1" />
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fas fa-handshake"></i>
+                                            Bancontact
+                                          </h4>
+                                          Paying small amounts very easily
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                    </b-card-text>
+                                  </b-card>
+                                  <br />
+                                  <b-row cols="3">
+                                    <b-col cols="4"></b-col>
+                                    <b-col cols="3"></b-col>
+                                    <b-col cols="5">
+                                      <h4>+ Add new address</h4>
+                                    </b-col>
+                                  </b-row>
+                                  <br />
+                                  <b-row>
+                                    <b-col cols="4">
+                                      <i class="fas fa-angle-left"></i>
+                                      Registered</b-col
+                                    >
+                                    <b-col cols="3">
+                                      <b-button
+                                        class="checkout1"
+                                        block
+                                        @click="
+                                          $bvModal.hide('bv-modal-example')
+                                        "
+                                        >Cancel</b-button
+                                      >
+                                    </b-col>
+                                    <b-col cols="5">
+                                      <b-button
+                                        v-b-modal.modal-center
+                                        id="show-btn"
+                                        class="checkout11"
+                                        @click="
+                                          $bvModal.show('bv-modal-example')
+                                        "
+                                        >Next Step</b-button
+                                      >
+                                    </b-col>
+                                  </b-row>
+                                </b-modal>
+                              </b-col>
+                            </b-row>
+                          </b-modal>
+                        </b-col>
+                      </b-row>
+                    </div>
+                  </b-modal>
+                </b-col>
+              </b-row>
             </b-container>
           </b-card>
         </b-col>
@@ -152,133 +551,7 @@
                         >Restaurant Info</b-button
                       >
 
-                      <b-modal
-                        id="modal-center"
-                        centered
-                        title="Restaurant Info"
-                        hide-footer
-                      >
-                        <template #modal-title> </template>
-                        <div class="d-block text-center"></div>
-                        <div>
-                          <h3 class="info">Restaurant Info</h3>
-                          <b-card title="" sub-title="">
-                            <b-card-text>
-                              <h4 class="mini">Minimum Order Amount</h4>
-                              €4,50 Lorem District(Dummy Address)
-                              <hr class="my-1" />
-                              <h4 class="mini">Payment Method</h4>
-                              Credit/Bank Card, Bancontact, Paybal,Apple Pay
-                              <hr class="my-1" />
-
-                              <div
-                                id="show-btn"
-                                @click="$bvModal.show('bv-modal-example')"
-                              >
-                                <b-modal id="bv-modal-example" hide-footer>
-                                  <b-row cols="2">
-                                    <b-col>
-                                      <h4 class="mini"></h4>
-                                      Days
-                                    </b-col>
-                                    <b-col style="text-align:right">
-                                      <h4 class="mini1"></h4>
-                                      Working Hours
-                                    </b-col>
-                                    <b-card cols="12" class="hours">
-                                      <b-card-text>
-                                        <b-row cols="2">
-                                          <b-col>
-                                            <h4 class="mini">Monday</h4>
-                                          </b-col>
-                                          <b-col>
-                                            <h4 class="mini1">10:00-23:00</h4>
-                                          </b-col>
-                                        </b-row>
-                                        <hr class="my-1" />
-                                        <b-row cols="2">
-                                          <b-col>
-                                            <h4 class="mini">Tuesday</h4>
-                                          </b-col>
-                                          <b-col>
-                                            <h4 class="mini1">10:00-23:00</h4>
-                                          </b-col>
-                                        </b-row>
-                                        <hr class="my-1" />
-                                        <b-row cols="2">
-                                          <b-col>
-                                            <h4 class="mini">Wednesday</h4>
-                                          </b-col>
-                                          <b-col>
-                                            <h4 class="mini1">10:00-23:00</h4>
-                                          </b-col>
-                                        </b-row>
-                                        <hr class="my-1" />
-                                        <b-row cols="2">
-                                          <b-col>
-                                            <h4 class="mini">Thursday</h4>
-                                          </b-col>
-                                          <b-col>
-                                            <h4 class="mini1">10:00-23:00</h4>
-                                          </b-col>
-                                        </b-row>
-                                        <hr class="my-1" />
-                                        <b-row cols="2">
-                                          <b-col>
-                                            <h4 class="mini">Friday</h4>
-                                          </b-col>
-                                          <b-col>
-                                            <h4 class="mini1">10:00-23:00</h4>
-                                          </b-col>
-                                        </b-row>
-                                        <hr class="my-1" />
-                                        <b-row cols="2">
-                                          <b-col>
-                                            <h4 class="mini">Saturday</h4>
-                                          </b-col>
-                                          <b-col>
-                                            <h4 class="mini1">10:00-23:00</h4>
-                                          </b-col>
-                                        </b-row>
-                                        <hr class="my-1" />
-                                        <b-row cols="2">
-                                          <b-col>
-                                            <h4 class="mini">Sunday</h4>
-                                          </b-col>
-                                          <b-col>
-                                            <h4 class="mini1">10:00-23:00</h4>
-                                          </b-col>
-                                        </b-row>
-                                      </b-card-text>
-                                    </b-card>
-                                  </b-row>
-                                </b-modal>
-                                <h4 class="mini">Working Hours</h4>
-                                Today: 10:00-19:00
-                                <div class="modal-day">
-                                  <i class="fas fa-chevron-right"></i>
-                                </div>
-                              </div>
-
-                              <hr class="my-1" />
-                              <h4 class="mini">Opportunities</h4>
-                              "Chicken McNuggets" for any menu order € 1.5
-                              <hr class="my-1" />
-                              <h4 class="mini">Contact</h4>
-                              <b-icon
-                                icon="telephone-fill"
-                                aria-hidden="true"
-                              ></b-icon>
-                              +35 00504540541
-                              <i
-                                style="margin-left: 35px"
-                                class="fas fa-envelope"
-                              ></i>
-                              corporate@burgerking.com
-                            </b-card-text>
-                          </b-card>
-                        </div>
-                      </b-modal>
+                     
                     </div>
                   </b-row>
                 </b-col>
@@ -808,14 +1081,15 @@
                           <b-col md="8">
                             <b-card-text>
                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
-                             </b-card-text>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
+                            </b-card-text>
                           </b-col>
                         </b>
                       </b-card>
@@ -834,14 +1108,15 @@
                           </b-col>
                           <b-col md="8">
                             <b-card-text>
-                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
+                              <b-row>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
                             </b-card-text>
                           </b-col>
                         </b>
@@ -863,13 +1138,14 @@
                           <b-col md="8">
                             <b-card-text>
                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
                             </b-card-text>
                           </b-col>
                         </b>
@@ -889,14 +1165,15 @@
                           </b-col>
                           <b-col md="8">
                             <b-card-text>
-                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
+                              <b-row>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
                             </b-card-text>
                           </b-col>
                         </b>
@@ -939,22 +1216,72 @@ export default {
         { text: "New", value: "new" },
         { text: "Halal", value: "halal" },
       ],
-      button:[
-        document.getElementsByClassName("btn btn-primary").innerHTML = "Add to basked"
-        
-      ],
-
     };
   },
   methods: {
     updateProfile() {
       alert("Your data: " + JSON.stringify(this.user));
     },
-    
   },
 };
 </script>
 <style>
+.restaurant1 {
+  color: #212529;
+  background-color: #f8b305;
+  border-color: #f8b305;
+  border-radius: 50px;
+  width: 100%;
+  margin-top: 30px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+.checkout1 {
+  background: black;
+  color: white;
+  border-radius: 30px;
+}
+.checkout11 {
+  background: #f8b305;
+  color: black;
+  border-radius: 30px;
+  width: 100%;
+}
+.outline-secondary {
+  background: rgb(219, 219, 238);
+}
+.basket {
+  color: #f8b305;
+}
+.basket1 {
+  color: #f8b305;
+}
+.basket11 {
+  color: #f8b305;
+  margin-top: 15px;
+}
+.basket2 {
+  float: right;
+}
+.basket22 {
+  float: right;
+  font-size: x-large;
+}
+.scroll {
+  margin-top: -60px;
+}
+p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  padding: 0px;
+}
+.burger {
+  text-align: center;
+}
+.basket-card {
+  width: 100%;
+  margin-left: 15px;
+}
 .btn:not(:last-child) {
   margin-right: 17.5rem;
   border-radius: 30px;
@@ -1275,6 +1602,12 @@ p {
 .modal-restaurant {
   margin-bottom: 20px;
   margin-left: 15px;
+}
+.modal-restaurant1 {
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100%;
 }
 .mt-4,
 .my-1 {

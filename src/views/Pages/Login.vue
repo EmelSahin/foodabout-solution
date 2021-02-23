@@ -34,7 +34,7 @@
                     class="mb-3"
                     name="Email"
                     :rules="{ required: true, email: true }"
-                    prepend-icon="ni ni-email-83"
+                    prepend-icon="ni ni-single-02"
                     placeholder="Username / E-mail / Phone number"
                     v-model="model.email"
                   >
@@ -70,7 +70,7 @@
                       Sign in</a
                     >
                     <b-row class="mt-3">
-                      <b-col cols="6">
+                      <b-col cols="8">
                         <b-form-checkbox to="/dashboard" class="text-light"
                           ><small
                             >I accept the
@@ -80,8 +80,8 @@
                           ></b-form-checkbox
                         >
                       </b-col>
-                      <b-col cols="6" class="text-right">
-                        <router-link to="/register" class="text-light"
+                      <b-col cols="4" class="text-right">
+                        <router-link to="/sign" class="text-light"
                           ><small>Sign Up</small></router-link
                         >
                       </b-col>
@@ -117,16 +117,9 @@ export default {
 </script>
 <style>
 .or-seperator {
-  margin: 20px 0 10px;
+  margin: 20px 0 0px;
   text-align: center;
   border-top: 1px solid #ccc;
-}
-.or-seperator i {
-  padding: 0 10px;
-  background: #f7f7f7;
-  position: relative;
-  top: -11px;
-  z-index: 1;
 }
 .pl-lg-5,
 .px-lg-5 {
@@ -145,7 +138,7 @@ export default {
 .img {
   vertical-align: middle;
   border-style: none;
-  width: 50px;
+  width: 100%;
 }
 .btn-block {
   margin: 20px 0;
@@ -188,7 +181,7 @@ export default {
   background-clip: border-box;
   border: 1px solid;
   border-radius: 20px;
-  width: 600px;
+  width: 100%;
 }
 .bg-default {
   background-color: #e9ebf0 !important;
@@ -204,4 +197,41 @@ export default {
     text-decoration: none;
     background-color: transparent;
 }
+.pr-lg-5, .px-lg-5 {
+    padding-right: 2rem !important;
+}
+.pr-lg-5, .px-lg-5 {
+    padding-left: 2rem !important;
+}
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem;
+}
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .input-group-text, .input-group > .input-group-append:not(:last-child) > .btn, .input-group > .input-group-append:not(:last-child) > .input-group-text, .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.input-group-alternative {
+    -webkit-box-shadow: 0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%);
+    box-shadow: 0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%);
+    border: 0;
+    -webkit-transition: -webkit-box-shadow .15s ease;
+    transition: -webkit-box-shadow .15s ease;
+    transition: box-shadow .15s ease;
+    transition: box-shadow .15s ease, -webkit-box-shadow .15s ease;
+    border-radius: 50px;
+}
+.input-group .form-control:not(:first-child) {
+    border-left: 0;
+    padding-left: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    float: left;
+}
+
 </style>

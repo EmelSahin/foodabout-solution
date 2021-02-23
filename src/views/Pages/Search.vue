@@ -75,9 +75,7 @@
                     </slide>
                     <slide class="p-2">
                       <b-card
-                        
                         class="restaurant"
-                        
                         img-alt="Image"
                         img-top
                         tag="article"
