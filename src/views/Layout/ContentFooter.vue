@@ -5,38 +5,22 @@
         <b-row cols="4">
           <b-col>
             <div class="logo1">
-              <a href="#">
+              <b-link :to="{ name: 'dashboard' }">
                 <b-img class="footer-logo" src="img/theme/logo.png" />
-              </a>
+              </b-link>
               <div class="text-left col-md-4 col-auto" data-v-318f9a99="">
                 <ul class="list-unstyled ml-3" data-v-318f9a99="">
                   <li data-v-318f9a99="">
-                    <a href="/" target="_self" data-v-318f9a99="" class=""
-                      >About us</a
-                    >
+                    <b-link :to="{ name: '' }">About us</b-link>
                   </li>
                   <li data-v-318f9a99="">
-                    <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                      >Careers</a
-                    >
+                    <b-link :to="{ name: '' }">Careers</b-link>
                   </li>
                   <li data-v-318f9a99="">
-                    <a
-                      href="/docs/components"
-                      target="_self"
-                      data-v-318f9a99=""
-                      class=""
-                      >Restaurant signup</a
-                    >
+                    <b-link :to="{ name: '' }">Restaurant signup</b-link>
                   </li>
                   <li data-v-318f9a99="">
-                    <a
-                      href="/docs/components"
-                      target="_self"
-                      data-v-318f9a99=""
-                      class=""
-                      >Become a rider</a
-                    >
+                    <b-link :to="{ name: 'profile' }">Become a rider</b-link>
                   </li>
                 </ul>
               </div>
@@ -49,19 +33,13 @@
               </h3>
               <ul class="list-unstyled ml-3" data-v-318f9a99="">
                 <li data-v-318f9a99="">
-                  <a href="/" target="_self" data-v-318f9a99="" class=""
-                    >Term & contitions</a
-                  >
+                  <b-link :to="{ name: '' }">Term & contitions</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                    >Privacy</a
-                  >
+                  <b-link :to="{ name: '' }">Privacy</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                    >Tax rates</a
-                  >
+                  <b-link :to="{ name: '' }">Tax rates</b-link>
                 </li>
               </ul>
             </div></b-col
@@ -73,23 +51,13 @@
               </h3>
               <ul class="list-unstyled ml-3" data-v-318f9a99="">
                 <li data-v-318f9a99="">
-                  <a href="/" target="_self" data-v-318f9a99="" class=""
-                    >Contact</a
-                  >
+                  <b-link :to="{ name: '' }">Contact</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                    >FAQs</a
-                  >
+                  <b-link :to="{ name: '' }">FAQs</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a
-                    href="/docs/components"
-                    target="_self"
-                    data-v-318f9a99=""
-                    class=""
-                    >Site map</a
-                  >
+                  <b-link :to="{ name: '' }">Site map</b-link>
                 </li>
               </ul>
             </div>
@@ -120,14 +88,13 @@
 export default {
   data() {
     return {
-      year: new Date().getFullYear(),
+      year: new Date().getFullYear()
     };
-  },
+  }
 };
 </script>
 <style>
 .footer {
- 
   background-color: #f6bd2f;
 }
 .container {

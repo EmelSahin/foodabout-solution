@@ -198,25 +198,26 @@
   </div>
 </template>
 <script>
-// Charts
-import * as chartConfigs from "@/components/Charts/config";
-import LineChart from "@/components/Charts/LineChart";
-import BarChart from "@/components/Charts/BarChart";
-
-// Components
-import BaseProgress from "@/components/BaseProgress";
-import StatsCard from "@/components/Cards/StatsCard";
-
-// Tables
-import SocialTrafficTable from "./Dashboard/SocialTrafficTable";
-import PageVisitsTable from "./Dashboard/PageVisitsTable";
-
+import { RESTAURANTS } from "@/graphql";
 export default {
   components: {},
   data() {
     return {};
   },
-  methods: {},
+  created() {
+    this.getRestaurants()
+  },
+  methods: {
+    getRestaurants() {
+      this.$apollo
+        .query({
+          query: RESTAURANTS
+        })
+        .then(res => {
+          console.log("res", res);
+        });
+    }
+  }
 };
 </script>
 <style>
@@ -320,7 +321,6 @@ export default {
 
   width: 100%;
   border-radius: 10px;
-  
 }
 .card-body1 {
   -webkit-box-flex: 1;
@@ -335,6 +335,5 @@ export default {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-
 }
 </style>
