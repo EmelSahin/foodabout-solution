@@ -212,7 +212,11 @@ export default {
     return {};
   },
   created() {
+<<<<<<< HEAD
     this.getRestaurants();
+=======
+    this.getRestaurants()
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
   },
   methods: {
     getRestaurants() {

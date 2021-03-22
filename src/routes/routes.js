@@ -18,17 +18,27 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/Dashboard.vue')
       },
       {
+<<<<<<< HEAD
         path: '/userprofile',
         name: 'userprofile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue'),
         meta: { title: 'User Profile' }
+=======
+        path: '/profile',
+        name: 'profile',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
       },
 
       {
         path: '/login',
         name: 'login',
+<<<<<<< HEAD
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Login.vue'),
         meta: { title: 'Login' }
+=======
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Login.vue')
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
       },
 
       {
@@ -79,6 +89,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Faq.vue'),
         meta: { title: 'CheckOut' }
       }
+<<<<<<< HEAD
       ,
       {
         path: '/contact',
@@ -139,6 +150,12 @@ const routes = [
       },
     ]
   },
+=======
+
+    ]
+  },
+
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
 ];
 
 export default routes;

@@ -11,6 +11,7 @@
               <div class="text-left col-md-4 col-auto" data-v-318f9a99="">
                 <ul class="list-unstyled ml-3" data-v-318f9a99="">
                   <li data-v-318f9a99="">
+<<<<<<< HEAD
                     <b-link :to="{ name: 'aboutus' }">About us</b-link>
                   </li>
                   <li data-v-318f9a99="careers">
@@ -20,6 +21,17 @@
                     <b-link :to="{ name: 'signup' }">Restaurant signup</b-link>
                   </li>
                   <li data-v-318f9a99="profile">
+=======
+                    <b-link :to="{ name: '' }">About us</b-link>
+                  </li>
+                  <li data-v-318f9a99="">
+                    <b-link :to="{ name: '' }">Careers</b-link>
+                  </li>
+                  <li data-v-318f9a99="">
+                    <b-link :to="{ name: '' }">Restaurant signup</b-link>
+                  </li>
+                  <li data-v-318f9a99="">
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
                     <b-link :to="{ name: 'profile' }">Become a rider</b-link>
                   </li>
                 </ul>
@@ -33,6 +45,7 @@
               </h3>
               <ul class="list-unstyled ml-3" data-v-318f9a99="">
                 <li data-v-318f9a99="">
+<<<<<<< HEAD
                   <b-link :to="{ name: 'term' }">Term & contitions</b-link>
                 </li>
                 <li data-v-318f9a99="">
@@ -40,6 +53,15 @@
                 </li>
                 <li data-v-318f9a99="">
                   <b-link :to="{ name: 'tax' }">Tax rates</b-link>
+=======
+                  <b-link :to="{ name: '' }">Term & contitions</b-link>
+                </li>
+                <li data-v-318f9a99="">
+                  <b-link :to="{ name: '' }">Privacy</b-link>
+                </li>
+                <li data-v-318f9a99="">
+                  <b-link :to="{ name: '' }">Tax rates</b-link>
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
                 </li>
               </ul>
             </div></b-col
@@ -51,6 +73,7 @@
               </h3>
               <ul class="list-unstyled ml-3" data-v-318f9a99="">
                 <li data-v-318f9a99="">
+<<<<<<< HEAD
                   <b-link :to="{ name: 'contact' }">Contact</b-link>
                 </li>
                 <li data-v-318f9a99="">
@@ -58,6 +81,15 @@
                 </li>
                 <li data-v-318f9a99="">
                   <b-link :to="{ name: 'sitemap' }">Site map</b-link>
+=======
+                  <b-link :to="{ name: '' }">Contact</b-link>
+                </li>
+                <li data-v-318f9a99="">
+                  <b-link :to="{ name: '' }">FAQs</b-link>
+                </li>
+                <li data-v-318f9a99="">
+                  <b-link :to="{ name: '' }">Site map</b-link>
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
                 </li>
               </ul>
             </div>

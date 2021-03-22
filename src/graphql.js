@@ -39,6 +39,7 @@ query banners {
   }
 }`
 export const RESTAURANTS = gql`
+<<<<<<< HEAD
 query restaurants {
   restaurants {
     id
@@ -49,6 +50,43 @@ query restaurants {
     estimatedDeliveryTime
   }
 }
+=======
+query restaurants($approveStatus: ApproveStatuses) {
+  restaurants(approveStatus: $approveStatus) {
+    id
+    restaurantChain {
+      id
+      name
+      logo
+    }
+    users {
+      id
+      firstName
+      lastName
+      role
+    }
+    name
+    logo
+    email
+    phone
+    mobile
+    address
+    zipcode
+    city
+    latitude
+    longitude
+    approveStatus
+    rejectReason
+    cuisines {
+      id
+      name
+      icon
+    }
+    estimatedDeliveryTime
+  }
+}
+
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
 `
 export const MENUS = gql`
   query menus($approveStatus: ApproveStatuses) {

@@ -14,7 +14,11 @@
         <b-navbar-nav class="ml-auto">
           <b-nav right class="nav-menu">
             <b-nav-item :to="{ name: 'dashboard' }">Home</b-nav-item>
+<<<<<<< HEAD
             <b-nav-item :to="{ name: 'workwithus' }">Work with us</b-nav-item>
+=======
+            <b-nav-item :to="{ name: 'profile' }">Work with us</b-nav-item>
+>>>>>>> bcae2b8b7bda8908bb649338b4bcc2670fcc7cfe
             <b-nav-item :to="{ name: 'basket' }">Basket</b-nav-item>
             <b-nav-item :to="{ name: 'order' }">Order</b-nav-item>
             <b-nav-item
