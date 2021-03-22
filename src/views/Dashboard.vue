@@ -22,10 +22,16 @@
             </b-row>
             <b-row cols="12">
               <b-col cols="6"
-                ><a href="#!" class="btn get-start">Enter Your Address</a>
+                ><b-form-input
+                  id="inline-form-input-name"
+                  class="get-start"
+                  placeholder="Enter Your Address"
+                ></b-form-input>
               </b-col>
               <b-col cols="6" class="text-right-r"
-                ><a href="#!" class="btn get-start1">Get Started</a>
+                ><b-link class="btn get-start1" :to="{ name: 'search' }"
+                  >Get Started</b-link
+                >
               </b-col>
             </b-row>
           </b-col>
@@ -102,6 +108,7 @@
 
         <b-row cols="2"> </b-row>
       </div>
+      <h1 class="dashboard-restaurant">New Restaurant</h1>
       <div>
         <b-card-group columns>
           <b-card
@@ -198,28 +205,35 @@
   </div>
 </template>
 <script>
-// Charts
-import * as chartConfigs from "@/components/Charts/config";
-import LineChart from "@/components/Charts/LineChart";
-import BarChart from "@/components/Charts/BarChart";
-
-// Components
-import BaseProgress from "@/components/BaseProgress";
-import StatsCard from "@/components/Cards/StatsCard";
-
-// Tables
-import SocialTrafficTable from "./Dashboard/SocialTrafficTable";
-import PageVisitsTable from "./Dashboard/PageVisitsTable";
-
+import { RESTAURANTS } from "@/graphql";
 export default {
   components: {},
   data() {
     return {};
   },
-  methods: {},
+  created() {
+    this.getRestaurants();
+  },
+  methods: {
+    getRestaurants() {
+      this.$apollo
+        .query({
+          query: RESTAURANTS
+        })
+        .then(res => {
+          console.log("res", res);
+        });
+    }
+  }
 };
 </script>
+
 <style>
+
+.dashboard-restaurant{
+  text-align: center;
+  font-weight: bold;
+}
 .container-fluid {
   background-color: #f6bd2f;
   height: 100%;
@@ -299,10 +313,13 @@ export default {
   width: 140px;
   margin-top: 40px;
   text-align: left;
+  color: #000;
 }
 .page-middle1 {
-  height: 100%;
-  text-align: center;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .page-middle_1 {
   height: 100%;
@@ -320,7 +337,6 @@ export default {
 
   width: 100%;
   border-radius: 10px;
-  
 }
 .card-body1 {
   -webkit-box-flex: 1;
@@ -335,6 +351,5 @@ export default {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-
 }
 </style>

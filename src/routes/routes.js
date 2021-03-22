@@ -1,7 +1,7 @@
 import DashboardLayout from '@/views/Layout/DashboardLayout.vue';
-import AuthLayout from '@/views/Pages/AuthLayout.vue';
 
-import NotFound from '@/views/NotFoundPage.vue';
+
+
 
 const routes = [
   {
@@ -18,77 +18,127 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/Dashboard.vue')
       },
       {
-        path: '/profile',
-        name: 'profile',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
+        path: '/userprofile',
+        name: 'userprofile',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue'),
+        meta: { title: 'User Profile' }
       },
-      {
-        path: '/maps',
-        name: 'maps',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/GoogleMaps.vue')
-      },
+
       {
         path: '/login',
         name: 'login',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Login.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Login.vue'),
+        meta: { title: 'Login' }
       },
-      {
-        path: '/tables',
-        name: 'tables',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/RegularTables.vue')
-      },
+
       {
         path: '/search',
         name: 'search',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Search.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Search.vue'),
+        meta: { title: 'Restaurant Search' }
       }
       ,
       {
-        path: '/details',
-        name: 'details',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/RestaurantDetails.vue')
+        path: '/restaurantdetails',
+        name: 'restaurantdetails',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/RestaurantDetails.vue'),
+        meta: { title: 'Restaurant Details' }
       }
       ,
       {
-        path: '/sign',
-        name: 'sign',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/SignUp.vue')
+        path: '/signup',
+        name: 'signup',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/SignUp.vue'),
+        meta: { title: 'Sign Up' }
       }
       ,
       {
         path: '/basket',
         name: 'basket',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Basket.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Basket.vue'),
+        meta: { title: 'Basket' }
       }
       ,
       {
         path: '/checkout',
         name: 'checkout',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/CheckOut.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/CheckOut.vue'),
+        meta: { title: 'CheckOut' }
       }
       ,
       {
         path: '/order',
         name: 'order',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Order.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Order.vue'),
+        meta: { title: 'Order' }
+      },
+      ,
+      {
+        path: '/faq',
+        name: 'faq',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Faq.vue'),
+        meta: { title: 'CheckOut' }
       }
-     
+      ,
+      {
+        path: '/contact',
+        name: 'contact',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Contact.vue'),
+        meta: { title: 'Order' }
+      },
+      
+      {
+        path: '/profile',
+        name: 'profile',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Profile.vue'),
+        meta: { title: 'Order' }
+      },
+      {
+        path: '/aboutus',
+        name: 'aboutus',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Aboutus.vue'),
+        meta: { title: 'Order' }
+      }
+      ,
+      {
+        path: '/privacy',
+        name: 'privacy',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Privacy.vue'),
+        meta: { title: 'Order' }
+      },
+      
+      {
+        path: '/tax',
+        name: 'tax',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Tax.vue'),
+        meta: { title: 'Order' }
+      },
+      {
+        path: '/term',
+        name: 'term',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Term.vue'),
+        meta: { title: 'Order' }
+      },
+      {
+        path: '/sitemap',
+        name: 'sitemap',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/SiteMap.vue'),
+        meta: { title: 'Order' }
+      },
+      {
+        path: '/workwithus',
+        name: 'workwithus',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/WorkWithUs.vue'),
+        meta: { title: 'Order' }
+      },
+      {
+        path: '/cuisinerestaurant',
+        name: 'cuisinerestaurant',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/CuisineRestaurant.vue'),
+        meta: { title: 'Order' }
+      },
     ]
   },
-  {
-    path: '/',
-    redirect: 'login',
-    component: AuthLayout,
-    children: [
-     
-      {
-        path: '/register',
-        name: 'register',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Register.vue')
-      },
-      { path: '*', component: NotFound }
-    ]
-  }
 ];
 
 export default routes;

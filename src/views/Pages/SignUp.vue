@@ -103,15 +103,16 @@ small, .small {
   border-radius: 50px;
   line-height: 30px;
 }
-.pr-lg-5, .px-lg-5 {
-    padding-left: 2rem !important;
-    background: white;
+.pr-lg-5,
+.px-lg-5 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: white;
+  padding-left: 2rem !important;
 }
 .card-body {
   border-radius: 20px;
-  border: 1px solid lightgrey;
-  margin-top: 60px;
-  margin-bottom: 60px;
+ 
 }
 
 

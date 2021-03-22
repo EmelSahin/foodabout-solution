@@ -2,6 +2,8 @@
   "name": "bootstrap-vue-argon-dashboard",
   "version": "1.0.0",
   "private": true,
+  "description": "BootstrapVue Argon Dashboard",
+  "author": "Creative Tim - https://www.creative-tim.com/",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -28,6 +30,7 @@
     "sweetalert2": "^9.5.4",
     "vee-validate": "^3.2.1",
     "vue": "^2.6.11",
+    "vue-apollo": "^3.0.0-beta.11",
     "vue-carousel": "^0.18.0",
     "vue-chartjs": "^3.5.0",
     "vue-clipboard2": "^0.3.0",
@@ -40,9 +43,16 @@
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
     "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
     "babel-plugin-component": "^1.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "graphql-tag": "^2.9.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-apollo": "~0.22.2",
     "vue-template-compiler": "^2.6.11"
   },
   "postcss": {
@@ -54,7 +64,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 10"
-  ],
-  "author": "Creative Tim - https://www.creative-tim.com/",
-  "description": "BootstrapVue Argon Dashboard"
+  ]
 }

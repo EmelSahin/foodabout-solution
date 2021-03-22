@@ -2,100 +2,68 @@
   <footer class="footer px-4">
     <div class="row justify-content-lg-between align-items-center">
       <b-container class="bv-example-row mb-3">
-        <b-row cols="4">
-          <b-col>
+        <b-row cols="12">
+          <b-col cols="3">
             <div class="logo1">
-              <a href="#">
+              <b-link :to="{ name: 'dashboard' }">
                 <b-img class="footer-logo" src="img/theme/logo.png" />
-              </a>
+              </b-link>
               <div class="text-left col-md-4 col-auto" data-v-318f9a99="">
                 <ul class="list-unstyled ml-3" data-v-318f9a99="">
                   <li data-v-318f9a99="">
-                    <a href="/" target="_self" data-v-318f9a99="" class=""
-                      >About us</a
-                    >
+                    <b-link :to="{ name: 'aboutus' }">About us</b-link>
+                  </li>
+                  <li data-v-318f9a99="careers">
+                    <b-link :to="{ name: '' }">Careers</b-link>
                   </li>
                   <li data-v-318f9a99="">
-                    <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                      >Careers</a
-                    >
+                    <b-link :to="{ name: 'signup' }">Restaurant signup</b-link>
                   </li>
-                  <li data-v-318f9a99="">
-                    <a
-                      href="/docs/components"
-                      target="_self"
-                      data-v-318f9a99=""
-                      class=""
-                      >Restaurant signup</a
-                    >
-                  </li>
-                  <li data-v-318f9a99="">
-                    <a
-                      href="/docs/components"
-                      target="_self"
-                      data-v-318f9a99=""
-                      class=""
-                      >Become a rider</a
-                    >
+                  <li data-v-318f9a99="profile">
+                    <b-link :to="{ name: 'profile' }">Become a rider</b-link>
                   </li>
                 </ul>
               </div>
             </div>
           </b-col>
-          <b-col
+          <b-col cols="3"
             ><div class="text-left col-md-4 col-auto" data-v-318f9a99="">
               <h3 class="bd-text-purple-bright mb-1" data-v-318f9a99="">
                 Legal
               </h3>
               <ul class="list-unstyled ml-3" data-v-318f9a99="">
                 <li data-v-318f9a99="">
-                  <a href="/" target="_self" data-v-318f9a99="" class=""
-                    >Term & contitions</a
-                  >
+                  <b-link :to="{ name: 'term' }">Term & contitions</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                    >Privacy</a
-                  >
+                  <b-link :to="{ name: 'privacy' }">Privacy</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                    >Tax rates</a
-                  >
+                  <b-link :to="{ name: 'tax' }">Tax rates</b-link>
                 </li>
               </ul>
             </div></b-col
           >
-          <b-col>
+          <b-col cols="3">
             <div class="text-left col-md-4 col-auto" data-v-318f9a99="">
               <h3 class="bd-text-purple-bright mb-1" data-v-318f9a99="">
                 Help
               </h3>
               <ul class="list-unstyled ml-3" data-v-318f9a99="">
                 <li data-v-318f9a99="">
-                  <a href="/" target="_self" data-v-318f9a99="" class=""
-                    >Contact</a
-                  >
+                  <b-link :to="{ name: 'contact' }">Contact</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a href="/docs" target="_self" data-v-318f9a99="" class=""
-                    >FAQs</a
-                  >
+                  <b-link :to="{ name: 'faq' }">FAQs</b-link>
                 </li>
                 <li data-v-318f9a99="">
-                  <a
-                    href="/docs/components"
-                    target="_self"
-                    data-v-318f9a99=""
-                    class=""
-                    >Site map</a
-                  >
+                  <b-link :to="{ name: 'sitemap' }">Site map</b-link>
                 </li>
               </ul>
             </div>
           </b-col>
 
-          <b-col
+          <b-col cols="3"
             ><div class="text-left col-md-4 col-auto" data-v-318f9a99="">
               <h3 class="bd-text-purple-bright mb-1" data-v-318f9a99="">
                 Download the App
@@ -120,19 +88,18 @@
 export default {
   data() {
     return {
-      year: new Date().getFullYear(),
+      year: new Date().getFullYear()
     };
-  },
+  }
 };
 </script>
 <style>
 .footer {
- 
   background-color: #f6bd2f;
 }
 .container {
   max-width: 1140px;
-  padding-top: 50px;
+
 }
 .footer .list-unstyled li a {
   display: inline-block;
@@ -158,5 +125,11 @@ h3,
   font-size: 1.38rem;
   color: #000000;
   width: 200px;
+}
+.btn:not(:last-child) {
+    margin-right: 17.5rem;
+    border-radius: 30px;
+    /* background: black; */
+    color: white;
 }
 </style>

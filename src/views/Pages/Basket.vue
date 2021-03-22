@@ -5,7 +5,8 @@
         <b-col md="3">
           <b-card class="card11">
             <b-container class="choose">
-              <b-form-group label="Sort by" v-slot="{ ariaDescribedby }">
+              <h4>Sort by</h4>
+              <b-form-group v-slot="{ ariaDescribedby }">
                 <b-form-radio-group
                   v-model="selectede"
                   :options="optionse"
@@ -14,7 +15,9 @@
                   stacked
                 ></b-form-radio-group>
               </b-form-group>
-              <b-form-group label="Filters" v-slot="{ ariaDescribedby }">
+              <h4>Filters</h4>
+              <h6 class="chooseheader">Reset</h6>
+              <b-form-group v-slot="{ ariaDescribedby }">
                 <b-form-checkbox-group
                   v-model="selected1"
                   :options="options1"
@@ -27,7 +30,7 @@
           </b-card>
         </b-col>
         <b-col md="9">
-          <b-card2>
+          <b-card-body class="px-lg-5 py-lg-5">
             <b-container class="work11">
               <h3>Basket</h3>
               <b-card-text> Items </b-card-text>
@@ -283,7 +286,9 @@
                                     </h4>
                                   </b-col>
                                   <b-col cols="2">
-                                    <b-form-radio name="radio-size"></b-form-radio>
+                                    <b-form-radio
+                                      name="radio-size"
+                                    ></b-form-radio>
                                   </b-col>
                                 </b-row>
 
@@ -297,132 +302,161 @@
                                     </h4>
                                   </b-col>
                                   <b-col cols="2">
-                                    <b-form-radio name="radio-size"></b-form-radio>
+                                    <b-form-radio
+                                      name="radio-size"
+                                    ></b-form-radio>
                                   </b-col>
                                 </b-row>
                                 <hr class="my-1" />
                                 <b-row>
                                   <b-col cols="10">
-                                   <i class="fas fa-home"></i>
+                                    <i class="fas fa-home"></i>
                                     Home 2
                                     <h4 class="mini">
                                       Dummy Address Lorem Ipsum Sit Amet
                                     </h4>
                                   </b-col>
                                   <b-col cols="2">
-                                    <b-form-radio name="radio-size"></b-form-radio>
+                                    <b-form-radio
+                                      name="radio-size"
+                                    ></b-form-radio>
                                   </b-col>
                                 </b-row>
-                                </b-card-text>
+                              </b-card-text>
                             </b-card>
-                            
-                            <br/>
-                             <b-row>
-                        <b-col cols="4"> <i class="fas fa-angle-left"></i> Items</b-col>
-                        <b-col cols="3">
-                          <b-button
-                            class="checkout1"
-                            block
-                            @click="$bvModal.hide('bv-modal-example')"
-                            >Cancel</b-button
-                          >
-                        </b-col>
-                        <b-col cols="5">
-                          <b-button
-                            v-b-modal.modal-center
-                            id="show-btn"
-                            class="checkout11"
-                            @click="$bvModal.show('bv-modal-example')"
-                            >Next Step</b-button
-                          >
-                          <b-modal id="bv-modal-example" centered hide-footer>
-                            <h3 class="info">Checkout</h3>
-                            <b-card-text> Chosee payment method </b-card-text>
-                            <b-card title="" sub-title="">
-                              <b-card-text>
-                                <b-row>
-                                  <b-col cols="10">
-                                    
-                                   
-                                    <h4 class="mini"><i class="fas fa-globe"></i>
-                                      Online
-                                    </h4>
-                                     Credit/Bank Card
-                                  </b-col>
-                                  <b-col cols="2">
-                                    <b-form-radio name="radio-size"></b-form-radio>
-                                  </b-col>
-                                </b-row>
-                                <hr class="my-1" />
-                                <b-row>
-                                  <b-col cols="10">
-                                   <h4 class="mini"><i class="fab fa-paypal"></i>
-                                      Paybal
-                                    </h4>
-                                     The faster, safer way to send money
-                                  </b-col>
-                                  <b-col cols="2">
-                                    <b-form-radio name="radio-size"></b-form-radio>
-                                  </b-col>
-                                </b-row>
-                                <hr class="my-1" />
-                                <b-row>
-                                  <b-col cols="10">
-                                   <h4 class="mini"><i class="fab fa-cc-apple-pay"></i>
-                                      Apple Pay
-                                    </h4>
-                                     Mobile payment and digital wallet
-                                  </b-col>
-                                  <b-col cols="2">
-                                    <b-form-radio name="radio-size"></b-form-radio>
-                                  </b-col>
-                                </b-row>
-                                <hr class="my-1" />
-                                <b-row>
-                                  <b-col cols="10">
-                                   <h4 class="mini"><i class="fas fa-handshake"></i>
-                                      Bancontact
-                                    </h4>
-                                     Paying small amounts very easily
-                                  </b-col>
-                                  <b-col cols="2">
-                                    <b-form-radio name="radio-size"></b-form-radio>
-                                  </b-col>
-                                </b-row>
-                                </b-card-text>
-                            </b-card>
-                            <br/>
-                            <b-row cols="3">
+
+                            <br />
+                            <b-row>
+                              <b-col cols="4">
+                                <i class="fas fa-angle-left"></i> Items</b-col
+                              >
+                              <b-col cols="3">
+                                <b-button
+                                  class="checkout1"
+                                  block
+                                  @click="$bvModal.hide('bv-modal-example')"
+                                  >Cancel</b-button
+                                >
+                              </b-col>
+                              <b-col cols="5">
+                                <b-button
+                                  v-b-modal.modal-center
+                                  id="show-btn"
+                                  class="checkout11"
+                                  @click="$bvModal.show('bv-modal-example')"
+                                  >Next Step</b-button
+                                >
+                                <b-modal
+                                  id="bv-modal-example"
+                                  centered
+                                  hide-footer
+                                >
+                                  <h3 class="info">Checkout</h3>
+                                  <b-card-text>
+                                    Choose payment method
+                                  </b-card-text>
+                                  <b-card title="" sub-title="">
+                                    <b-card-text>
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fas fa-globe"></i>
+                                            Online
+                                          </h4>
+                                          Credit/Bank Card
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                      <hr class="my-1" />
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fab fa-paypal"></i>
+                                            Paybal
+                                          </h4>
+                                          The faster, safer way to send money
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                      <hr class="my-1" />
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fab fa-cc-apple-pay"></i>
+                                            Apple Pay
+                                          </h4>
+                                          Mobile payment and digital wallet
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                      <hr class="my-1" />
+                                      <b-row>
+                                        <b-col cols="10">
+                                          <h4 class="mini">
+                                            <i class="fas fa-handshake"></i>
+                                            Bancontact
+                                          </h4>
+                                          Paying small amounts very easily
+                                        </b-col>
+                                        <b-col cols="2">
+                                          <b-form-radio
+                                            name="radio-size"
+                                          ></b-form-radio>
+                                        </b-col>
+                                      </b-row>
+                                    </b-card-text>
+                                  </b-card>
+                                  <br />
+                                  <b-row cols="3">
                                     <b-col cols="4"></b-col>
                                     <b-col cols="3"></b-col>
-                                    <b-col cols="5"> <h4>
-                                      + Add new address
-                                    </h4> </b-col>
+                                    <b-col cols="5">
+                                      <h4>+ Add new address</h4>
+                                    </b-col>
+                                  </b-row>
+                                  <br />
+                                  <b-row>
+                                    <b-col cols="4">
+                                      <i class="fas fa-angle-left"></i>
+                                      Registered</b-col
+                                    >
+                                    <b-col cols="3">
+                                      <b-button
+                                        class="checkout1"
+                                        block
+                                        @click="
+                                          $bvModal.hide('bv-modal-example')
+                                        "
+                                        >Cancel</b-button
+                                      >
+                                    </b-col>
+                                    <b-col cols="5">
+                                      <b-button
+                                        v-b-modal.modal-center
+                                        id="show-btn"
+                                        class="checkout11"
+                                        @click="
+                                          $bvModal.show('bv-modal-example')
+                                        "
+                                        >Next Step</b-button
+                                      >
+                                    </b-col>
+                                  </b-row>
+                                </b-modal>
+                              </b-col>
                             </b-row>
-                            <br/>
-                             <b-row>
-                        <b-col cols="4"> <i class="fas fa-angle-left"></i> Registered</b-col>
-                        <b-col cols="3">
-                          <b-button
-                            class="checkout1"
-                            block
-                            @click="$bvModal.hide('bv-modal-example')"
-                            >Cancel</b-button
-                          >
-                        </b-col>
-                        <b-col cols="5">
-                          <b-button
-                            v-b-modal.modal-center
-                            id="show-btn"
-                            class="checkout11"
-                            @click="$bvModal.show('bv-modal-example')"
-                            >Next Step</b-button
-                          >
-                        </b-col>
-                             </b-row>
-                          </b-modal>
-                        </b-col>
-                        </b-row>
                           </b-modal>
                         </b-col>
                       </b-row>
@@ -431,7 +465,7 @@
                 </div>
               </b-row>
             </b-container>
-          </b-card2>
+          </b-card-body>
         </b-col>
       </b-row>
     </div>
@@ -474,6 +508,30 @@ export default {
 };
 </script>
 <style>
+.pr-lg-5,
+.px-lg-5 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: white;
+  padding-left: 2rem !important;
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #f8b305;
+}
+.chooseheader {
+  margin-top: -25px;
+  margin-left: 140px;
+}
+.choose{
+  margin-top: 30px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #f8b305;
+  background-color: #f8b305;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .checkout1 {
   background: black;
   color: white;
@@ -565,7 +623,6 @@ p {
   line-height: 1.5;
   color: #8898aa;
   vertical-align: middle;
-
   background-color: #fff;
   border: 1px solid #cad1d7;
   border-radius: 50px;
@@ -574,7 +631,6 @@ p {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  float: right;
 }
 .card11 {
   position: relative;
@@ -590,10 +646,11 @@ p {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
   margin-left: 0px;
   width: 100%;
-  margin-top: -50px;
+  height: 100%;
+  border-radius: 0px;
+  
 }
 .card22 {
   position: relative;
@@ -638,9 +695,7 @@ p {
   width: 250px;
   float: right;
 }
-.choose {
-  height: 700px;
-}
+
 .pt-lg-8,
 .py-lg-8 {
   padding-top: 0px !important;
@@ -661,8 +716,7 @@ p {
   border-radius: 20px;
   width: 817px;
   padding: 50px 50px 70px 30px;
-  margin-bottom: 70px;
-  margin-top: 20px;
+ 
 }
 h1,
 .h1 {

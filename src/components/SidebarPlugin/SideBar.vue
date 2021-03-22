@@ -1,5 +1,5 @@
 <template>
-    
+    <div></div>
 </template>
 <script>
   import NavbarToggleButton from '@/components/NavbarToggleButton'
@@ -15,15 +15,15 @@
         default: 'img/brand/green.png',
         description: 'Sidebar app logo'
       },
-      autoClose: {
+     /* autoClose: {
         type: Boolean,
         default: true,
         description: 'Whether sidebar should autoclose on mobile when clicking an item'
-      }
+      }*/
     },
     provide() {
       return {
-        autoClose: this.autoClose
+        //autoClose: this.autoClose
       };
     },
     methods: {

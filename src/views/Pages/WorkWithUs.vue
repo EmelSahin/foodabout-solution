@@ -5,7 +5,8 @@
         <b-col md="3">
           <b-card class="card1">
             <b-container class="choose">
-              <b-form-group label="Sort by" v-slot="{ ariaDescribedby }">
+              <h4>Sort by</h4>
+              <b-form-group v-slot="{ ariaDescribedby }">
                 <b-form-radio-group
                   v-model="selectede"
                   :options="optionse"
@@ -14,7 +15,9 @@
                   stacked
                 ></b-form-radio-group>
               </b-form-group>
-              <b-form-group label="Filters" v-slot="{ ariaDescribedby }">
+              <h4>Filters</h4>
+              <h6 class="chooseheader">Reset</h6>
+              <b-form-group v-slot="{ ariaDescribedby }">
                 <b-form-checkbox-group
                   v-model="selected1"
                   :options="options1"
@@ -27,7 +30,7 @@
           </b-card>
         </b-col>
         <b-col md="9">
-          <b-card2>
+          <b-card-body class="px-lg-5 py-lg-5">
             <b-container class="work">
               <b-form @submit.prevent="updateProfile">
                 <h6 class="heading-small text-muted mb-4">Work with us</h6>
@@ -120,10 +123,10 @@
                 </div>
               </b-form>
             </b-container>
-          </b-card2>
+          </b-card-body>
           <div>
             <div class="work2">
-              <b-card2 img-alt="Card image" img-right>
+              <b-card img-alt="Card image" img-right>
                 <section>
                   <b-card-text>
                     <h6 class="heading-small text-muted mb-4">
@@ -131,22 +134,24 @@
                     </h6>
 
                     <b-icon icon="bicycle" aria-hidden="true"></b-icon> Bicycle
-                    <input
-                      class="radio"
-                      type="radio"
-                      v-model="n"
-                      v-bind:value="a"
-                    />
-                    <hr class="my-1" />
+                    <input class="radio" type="radio" />
+                    <hr class="my-3" />
                     <i class="fas fa-motorcycle"></i> Motorcycle
-                    <input class="radio" type="radio" v-model="n" />
-                    <hr class="my-1" />
+                    <input class="radio" type="radio" />
+                    <hr class="my-3" />
                     <i class="fas fa-car-side"></i> Car
-                    <input class="radio" type="radio" v-model="n" />
+                    <input class="radio" type="radio" />
                   </b-card-text>
                 </section>
-                <b-button class="btn1 apply">Apply for a job</b-button>
-              </b-card2>
+
+                <b-button class="btn1 apply">
+                  <div>
+                    <b-link style="color: black" href="dashboard"
+                      >Apply for a job</b-link
+                    >
+                  </div></b-button
+                >
+              </b-card>
             </div>
           </div>
         </b-col>
@@ -202,6 +207,37 @@ export default {
 };
 </script>
 <style>
+.pr-lg-5,
+.px-lg-5 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: white;
+  padding-left: 2rem !important;
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #f8b305;
+}
+.card-body {
+  border-radius: 20px;
+  /* border: 1px solid lightgrey; */
+  /* margin-top: 60px; */
+}
+.custom-control-label span {
+  position: relative;
+  margin-left: -20px;
+  top: 2px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #f8b305;
+  background-color: #f8b305;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.chooseheader {
+  margin-top: -25px;
+  margin-left: 140px;
+}
 .form-control {
   display: block;
   width: 90%;
@@ -224,6 +260,7 @@ export default {
 .custom-select {
   display: inline-block;
   width: 90%;
+  margin-left: 55px;
   height: calc(1.5em + 1.25rem + 2px);
   padding: 0.625rem 1.75rem 0.625rem 0.75rem;
   font-size: 0.875rem;
@@ -241,6 +278,22 @@ export default {
   -moz-appearance: none;
   appearance: none;
 }
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
 .card1 {
   border-radius: 0px;
   position: relative;
@@ -256,8 +309,10 @@ export default {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-left: 0px;
+  width: 100%;
   height: 100%;
-  width: 250px;
+  
 }
 .card2 {
   position: relative;
@@ -282,11 +337,16 @@ export default {
   background-color: transparent;
 }
 .heading-small {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.3rem;
   text-transform: none;
+  letter-spacing: 0.04em;
 }
 .radio {
   float: right;
   color: black;
+  margin-top: 10px;
 }
 .btn1 {
   position: relative;
@@ -300,6 +360,7 @@ export default {
   border-radius: 50px;
   width: 250px;
   float: right;
+  margin-top: 30px;
 }
 
 .pt-lg-8,
@@ -311,15 +372,17 @@ export default {
   padding-bottom: 8rem !important;
 }
 .work {
-  background: #fff;
+    padding: 0px;
   border-radius: 20px;
   width: 100%;
+  margin-top: -30px;
 }
 .work2 {
   background: #fff;
   border-radius: 20px;
   width: 100%;
-  padding: 50px 50px 70px 30px;
-  margin-bottom: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 </style>

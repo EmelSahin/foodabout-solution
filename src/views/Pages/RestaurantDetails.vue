@@ -5,7 +5,8 @@
         <b-col md="3">
           <b-card class="card11">
             <b-container class="choose">
-              <b-form-group label="Sort by" v-slot="{ ariaDescribedby }">
+              <h4>Sort by</h4>
+              <b-form-group  v-slot="{ ariaDescribedby }">
                 <b-form-radio-group
                   v-model="selectede"
                   :options="optionse"
@@ -14,7 +15,9 @@
                   stacked
                 ></b-form-radio-group>
               </b-form-group>
-              <b-form-group label="Filters" v-slot="{ ariaDescribedby }">
+              <h4>Filters</h4>
+                <h6 class="chooseheader">Reset</h6>
+              <b-form-group v-slot="{ ariaDescribedby }">
                 <b-form-checkbox-group
                   v-model="selected1"
                   :options="options1"
@@ -23,12 +26,11 @@
                   stacked
                 ></b-form-checkbox-group>
               </b-form-group>
-              
             </b-container>
           </b-card>
         </b-col>
-        <b-col md="9">
-          <b-card2>
+        <b-col md="9" style="margin-top:50px">
+          <b-card>
             <b-container class="work11">
               <b-row>
                 <b-col md="7">
@@ -181,7 +183,7 @@
                                       <h4 class="mini"></h4>
                                       Days
                                     </b-col>
-                                    <b-col style="text-align:right">
+                                    <b-col style="text-align: right">
                                       <h4 class="mini1"></h4>
                                       Working Hours
                                     </b-col>
@@ -295,8 +297,8 @@
                 </b-col>
               </b-row>
             </b-container>
-          </b-card2>
-          <b-card2>
+          </b-card>
+          <b-card>
             <b-container class="work22">
               <b-row>
                 <h4>Burgers</h4>
@@ -349,10 +351,13 @@
                               <b-card-text>
                                 <b-row>
                                   <b-col cols="10">
-                                    <h4><del class="menu-drinks"> 
-                                      <i class=""></i
+                                    <h4>
+                                      <del class="menu-drinks">
+                                        <i class=""></i>
+                                        <span class="menu-drinks"
+                                          >Onion</span
+                                        ></del
                                       >
-                                      <span class="menu-drinks">Onion</span></del> 
                                     </h4>
                                   </b-col>
                                   <b-col cols="2">
@@ -381,9 +386,13 @@
                                 <hr class="my-1" />
                                 <b-row>
                                   <b-col cols="10">
-                                    <h4> <del class="menu-drinks"> 
-                                      <i class=""></i
-                                      ><span class="menu-drinks">Pickle</span></del>
+                                    <h4>
+                                      <del class="menu-drinks">
+                                        <i class=""></i
+                                        ><span class="menu-drinks"
+                                          >Pickle</span
+                                        ></del
+                                      >
                                     </h4>
                                   </b-col>
                                   <b-col cols="2">
@@ -434,7 +443,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -446,7 +455,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                   
                                   />
                                 </h4>
 
@@ -457,7 +466,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                            
                                   />
                                 </h4>
                               </b-card-text>
@@ -472,7 +481,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                   
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -481,7 +490,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                   
                                   />
                                 </h4>
 
@@ -491,7 +500,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -500,7 +509,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                   
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -509,7 +518,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                 
                                   />
                                 </h4>
 
@@ -519,7 +528,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                   
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -528,7 +537,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                  
                                   />
                                 </h4>
                               </b-card-text>
@@ -543,7 +552,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                 
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -552,7 +561,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                   
                                   />
                                 </h4>
 
@@ -562,7 +571,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
                               </b-card-text>
@@ -578,7 +587,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
                               </b-card-text>
@@ -593,7 +602,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -602,7 +611,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
 
@@ -612,7 +621,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -621,7 +630,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
                               </b-card-text>
@@ -636,7 +645,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                              
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -645,7 +654,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                    
                                   />
                                 </h4>
 
@@ -655,7 +664,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                  
                                   />
                                 </h4>
                                 <hr class="my-1" />
@@ -664,7 +673,7 @@
                                   <input
                                     class="radio"
                                     type="radio"
-                                    v-model="n"
+                                  
                                   />
                                 </h4>
                               </b-card-text>
@@ -785,8 +794,8 @@
                 </b-col>
               </b-row>
             </b-container>
-          </b-card2>
-          <b-card2>
+          </b-card>
+          <b-card>
             <b-container class="work22">
               <div class="row">
                 <h4>Drinks</h4>
@@ -808,14 +817,15 @@
                           <b-col md="8">
                             <b-card-text>
                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
-                             </b-card-text>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
+                            </b-card-text>
                           </b-col>
                         </b>
                       </b-card>
@@ -834,14 +844,15 @@
                           </b-col>
                           <b-col md="8">
                             <b-card-text>
-                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
+                              <b-row>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
                             </b-card-text>
                           </b-col>
                         </b>
@@ -863,13 +874,14 @@
                           <b-col md="8">
                             <b-card-text>
                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
                             </b-card-text>
                           </b-col>
                         </b>
@@ -889,14 +901,15 @@
                           </b-col>
                           <b-col md="8">
                             <b-card-text>
-                               <b-row>
-                               <h4>Coca Cola 330ml.</h4>
-                              Lorem ipsum dolar sit amet, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua.
-                            </b-row>
-                            <b-row>
-                              <i class="fas fa-money-bill"> € 1.90</i>
-                            </b-row>
+                              <b-row>
+                                <h4>Coca Cola 330ml.</h4>
+                                Lorem ipsum dolar sit amet, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna
+                                aliqua.
+                              </b-row>
+                              <b-row>
+                                <i class="fas fa-money-bill"> € 1.90</i>
+                              </b-row>
                             </b-card-text>
                           </b-col>
                         </b>
@@ -906,7 +919,7 @@
                 </b-col>
               </div>
             </b-container>
-          </b-card2>
+          </b-card>
         </b-col>
       </b-row>
     </div>
@@ -939,26 +952,65 @@ export default {
         { text: "New", value: "new" },
         { text: "Halal", value: "halal" },
       ],
-      button:[
-        document.getElementsByClassName("btn btn-primary").innerHTML = "Add to basked"
-        
+      button: [
+        (document.getElementsByClassName("btn btn-primary").innerHTML =
+          "Add to basked"),
       ],
-
     };
   },
   methods: {
     updateProfile() {
       alert("Your data: " + JSON.stringify(this.user));
     },
-    
   },
 };
 </script>
 <style>
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /* border: 1px solid rgba(0, 0, 0, 0.05); */
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #f8b305;
+}
+.choose{
+  margin-top: 30px;
+}
+.chooseheader {
+  margin-top: -25px;
+  margin-left: 140px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #f8b305;
+  background-color: #f8b305;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.pr-lg-5,
+.px-lg-5 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: white;
+  padding-left: 2rem !important;
+}
 .btn:not(:last-child) {
   margin-right: 17.5rem;
   border-radius: 30px;
-  background: black;
   color: white;
 }
 .modal-footer > :not(:first-child) {
@@ -1038,6 +1090,7 @@ p {
   appearance: none;
 }
 .card11 {
+  border-radius: 0px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1051,10 +1104,10 @@ p {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
   margin-left: 0px;
   width: 100%;
-  margin-top: -50px;
+  height: 100%;
+ 
 }
 .card22 {
   position: relative;
@@ -1075,7 +1128,7 @@ p {
 }
 
 .a {
-  color: #ffffff;
+  color: black;
   text-decoration: none;
   background-color: transparent;
 }
@@ -1099,9 +1152,7 @@ p {
   width: 250px;
   float: right;
 }
-.choose {
-  height: 100%;
-}
+
 .pt-lg-8,
 .py-lg-8 {
   padding-top: 0px !important;
@@ -1121,8 +1172,7 @@ p {
   border-radius: 20px;
   width: 817px;
   padding: 50px 50px 70px 30px;
-  margin-bottom: 70px;
-  margin-top: 20px;
+
 }
 h1,
 .h1 {

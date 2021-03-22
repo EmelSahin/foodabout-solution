@@ -97,9 +97,9 @@ export default {
   inject: {
     addLink: { default: null },
     removeLink: { default: null },
-    autoClose: {
+   /* autoClose: {
       default: true
-    }
+    }*/
   },
   data() {
     return {
@@ -155,7 +155,7 @@ export default {
     },
     linkClick() {
       if (
-        this.autoClose &&
+       // this.autoClose &&
         this.$sidebar &&
         this.$sidebar.showSidebar === true
       ) {
